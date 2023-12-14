@@ -1,3 +1,6 @@
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -48,6 +51,7 @@ app.MapGet(
                             summaries[Random.Shared.Next(summaries.Length)]
                         ))
                 .ToArray();
+            Console.WriteLine($"{DateTime.Now:HH:mm:ss}");
             return forecast;
         })
     .WithName("GetWeatherForecast")
