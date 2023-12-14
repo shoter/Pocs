@@ -1,0 +1,6 @@
+services:
+  proxy:
+    build: .
+    ports:
+      - "11080:8080"
+

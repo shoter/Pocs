@@ -1,3 +1,4 @@
 version: '3'
 include:
   - ./service/include.yml
+  - ./Proxy/include.yml
